@@ -103,9 +103,10 @@ function DrawPolygon(polygon) {
             // Add edge to edge_table
             if (prev_y > current_y){
                 edge_table[current_y].InsertEdge(new EdgeEntry(prev_y, current_x, (prev_x-current_x), (prev_y-current_y)));
-            }else{
+            }else if (prev_y < current_y){
                 edge_table[prev_y].InsertEdge(new EdgeEntry(current_y, prev_x, (prev_x-current_x), (prev_y-current_y)));
             }
+//          // ignore matcing y (horizontal line
 
             // console.log(edge_table)
             //debug
