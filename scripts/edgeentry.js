@@ -50,6 +50,7 @@ class EdgeList {
             let next_entry = prev_entry.next_entry;
             while (next_entry !== null) {
                 if (next_entry.y_max === y) {
+                    console.log("removing : " + y + " from list");
                     prev_entry.next_entry = next_entry.next_entry;
                 }
                 else {
